@@ -2,7 +2,7 @@
 //~ Encapsulating the this._data view part
 
 import icons from 'url:../../img/icons.svg';
-import { Fraction } from 'fractional';
+import { Fraction } from 'fraction.js';
 import View from './view.js';
 
 class RecipeView extends View {
