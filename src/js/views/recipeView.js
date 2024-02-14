@@ -2,8 +2,10 @@
 //~ Encapsulating the this._data view part
 
 import icons from 'url:../../img/icons.svg';
-import { Fraction } from 'fraction.js';
+// import { Fraction } from 'fractional';
+import { numberToFraction } from '../helpers.js';
 import View from './view.js';
+
 
 class RecipeView extends View {
   // Variables:
@@ -132,7 +134,7 @@ class RecipeView extends View {
           <svg class="recipe__icon">
             <use href="${icons}#icon-check"></use>
           </svg>
-          <div class="recipe__quantity">${ing.quantity ? new Fraction(ing.quantity) : 'some'.toString()}</div>
+          <div class="recipe__quantity">${ing.quantity ? numberToFraction(ing.quantity).toString() : 'some'}</div>
           <div class="recipe__description">
             <span class="recipe__unit">${ing.unit}</span>
             ${ing.description}
